@@ -26,14 +26,14 @@ var protoJsonRefs = {
 		if(parts.length > 2)
 			throw new Error('Unable to get JSON Ref (' + uri + '): uri cannot contain multiple fragment identifiers (#)');
 
-		if(parts[0]) {
+		if(parts[0])
 			subject = this.__refs[parts[0]];
 
-			if(!subject)
-				throw new Error('Unable to locate JSON Ref (' + parts[0] + ')');
-		}
+		if(!subject)
+			throw new Error('Unable to locate JSON Ref (' + parts[0] + ')');
 
-		if(parts.length === 1 || ignoreFragment) return subject;
+		if(parts.length === 1 || ignoreFragment)
+			return subject;
 
 		return jsonPointer(parts[1]).get(subject);
 	}

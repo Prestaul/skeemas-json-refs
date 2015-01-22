@@ -87,32 +87,32 @@ describe('jsonRefs', function() {
 		it('should return a full reference', function() {
 			var ref = {},
 				refs = jsonRefs().add('/foo', ref),
-				val = refs.get('/foo')
+				val = refs.get('/foo');
 			assert.strictEqual(val, ref);
 		});
 
 		it('should return a value from a reference', function() {
 			var refs = jsonRefs().add('/foo', { type:'test' }),
-				val = refs.get('/foo#/type')
+				val = refs.get('/foo#/type');
 			assert.strictEqual(val, 'test');
 		});
 
 		it('should return a nested value from a reference', function() {
 			var refs = jsonRefs().add('/foo', { defs: { type:'test' } }),
-				val = refs.get('/foo#/defs/type')
+				val = refs.get('/foo#/defs/type');
 			assert.strictEqual(val, 'test');
 		});
 
 		it('should return an array from a reference', function() {
 			var ref = [1, 2, 3],
 				refs = jsonRefs().add('/foo', { bars:ref }),
-				val = refs.get('/foo#/bars')
+				val = refs.get('/foo#/bars');
 			assert.strictEqual(val, ref);
 		});
 
 		it('should return an array item from a reference', function() {
 			var refs = jsonRefs().add('/foo', { bars:[1, 2, 3] }),
-				val = refs.get('/foo#/bars/1')
+				val = refs.get('/foo#/bars/1');
 			assert.strictEqual(val, 2);
 		});
 	});
