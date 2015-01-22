@@ -1,6 +1,6 @@
 {
   "name": "skeemas-json-refs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight solution for resolving json-schema $refs",
   "main": "index.js",
   "scripts": {
