@@ -20,5 +20,8 @@
   "devDependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "skeemas-json-pointer": "^1.0.0"
   }
 }
